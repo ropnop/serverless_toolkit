@@ -1,0 +1,14 @@
+{
+  "name": "massdns-serverless",
+  "version": "1.0.0",
+  "description": "Serverless deployment of massdns",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "micro server.js"
+  },
+  "author": "Ronnie Flathers (@ropnop)",
+  "license": "ISC",
+  "dependencies": {
+    "micro": "^9.3.3"
+  }
+}
