@@ -1,0 +1,21 @@
+{
+  "name": "req-dump",
+  "version": "1.0.0",
+  "description": "Serverless Function to Dump Raw Request",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "micro server.js",
+    "dev": "micro-dev server.js"
+  },
+  "author": "Ronnie Flathers (@ropnop)",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.11",
+    "micro": "^9.3.3",
+    "request-ip": "^2.1.1"
+  },
+  "devDependencies": {
+    "micro-dev": "^3.0.0"
+  }
+}
