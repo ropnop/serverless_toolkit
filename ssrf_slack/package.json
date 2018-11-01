@@ -1,0 +1,23 @@
+{
+  "name": "ssrf-slack-notify",
+  "version": "1.0.0",
+  "description": "Serverless function to notify slack when it gets a request",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "micro server.js",
+    "dev": "micro-dev server.js"
+  },
+  "author": "Ronnie Flathers (@ropnop)",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.11",
+    "micro": "^9.3.3",
+    "moment": "^2.22.2",
+    "request-ip": "^2.1.1",
+    "slack-webhook": "^1.0.0"
+  },
+  "devDependencies": {
+    "micro-dev": "^3.0.0"
+  }
+}
