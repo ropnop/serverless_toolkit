@@ -1,0 +1,13 @@
+{
+  "name": "simple_redirect",
+  "version": "1.0.0",
+  "description": "Simple Micro server to redirect",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Ronnie Flathers (ropnop)",
+  "license": "ISC",
+  "dependencies": {}
+}
