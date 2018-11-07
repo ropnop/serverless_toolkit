@@ -1,0 +1,11 @@
+{
+  "name": "gopher_redirect",
+  "version": "1.0.0",
+  "description": "Serverless function to redirect to Gopher",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ronnie Flathers (@ropnop)",
+  "license": "ISC"
+}
