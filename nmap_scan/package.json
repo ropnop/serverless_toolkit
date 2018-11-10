@@ -1,0 +1,11 @@
+{
+  "name": "nmap_scan",
+  "version": "1.0.0",
+  "description": "Serverless function to run an nmap fast scan against a single host",
+  "main": "index.js",
+  "author": "Ronnie Flathers (@ropnop)",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
