@@ -1,5 +1,5 @@
 # Serverless Toolkit for Pentesters
-This repository is a collection of serverless functions I have developed over the past few months during bug bounties and penetration tests. I found myself constantly spinning up disposable VPSs to run tiny snippets of code or host some static resources and I got sick of wasting resources and managing that infrastructure to just run a simple command.
+This repository is a collection of serverless functions I have developed over the past few months doing bug bounties and penetration tests. I found myself constantly spinning up disposable VPSs to run tiny snippets of code or host some static resources and I got sick of wasting resources and managing that infrastructure to just run a simple command.
 
 All of these examples were written to make use of Zeit's awesome [now.sh](https://zeit.co/now). While I've used other providers like AWS Lambda and Google Cloud Functions (including the really cool [serverless toolkit](https://serverless.com/)), I found that now.sh was the most straightforward and allowed custom Dockerfiles to be executed. Zeit recently rolled out [Now 2.0](https://zeit.co/blog/now-2) which actually breaks a lot of these, so the version is pinned to 1.0 for each of these deployments.
 
