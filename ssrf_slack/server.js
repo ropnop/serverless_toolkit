@@ -23,7 +23,7 @@ const IGNORED_HEADERS = [
   "cf-connecting-ip",
   "true-client-ip",
 ]
-const IGNORE_HEADERS = true; // toggle this to show them
+const ALL_HEADERS = process.env.ALL_HEADERS || false; // toggle this to show them
 
 // Modify this function to customize the slack message to your liking
 const renderSlackMessage = (data) => {
@@ -47,7 +47,7 @@ module.exports = async (req, res) => {
   const clientIp = requestIp.getClientIp(req);
   const now = new Date();
   let headers = {};
-  if (IGNORE_HEADERS) {
+  if (!ALL_HEADERS) {
     headers = _.reduce(req.headers, (headers, headerval, headername) => {
       if (_.includes(IGNORED_HEADERS, headername)) {
         return headers;
