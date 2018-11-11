@@ -48,6 +48,12 @@ Similar to the nmap example, this runs [massdns](https://github.com/blechschmidt
 
 ![massdns_serverless](./imgs/massdns_serverless.png)
 
+### Webshell
+Someteimes you just want a shell. This uses gotty ontop of an Alpine base image with a few other extra pentester tools (nmap, ncat, etc). You can specify credentials in `username:password` format with the `GOTTY_CREDENTIALS` environment variable if you want.
+
+![gotty](./imgs/gotty.png)
+
+
 # Next Steps
 As I continue to play with serverless more I'll keep this updated. PR's and suggestions welcome!
 
