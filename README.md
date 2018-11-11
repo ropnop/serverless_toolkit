@@ -3,7 +3,7 @@ This repository is a collection of serverless functions I have developed over th
 
 All of these examples were written to make use of Zeit's awesome [now.sh](https://zeit.co/now). While I've used other providers like AWS Lambda and Google Cloud Functions (including the really cool [serverless toolkit](https://serverless.com/)), I found that now.sh was the most straightforward and allowed custom Dockerfiles to be executed. Zeit recently rolled out [Now 2.0](https://zeit.co/blog/now-2) which actually breaks a lot of these, so the version is pinned to 1.0 for each of these deployments.
 
-For more information and background, see the related blogpost: `TODO`
+For more information and background, see the related blogpost: https://blog.ropnop.com/serverless-toolkit-for-pentesters/
 
 -ropnop
 
