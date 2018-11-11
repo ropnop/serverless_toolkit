@@ -16,8 +16,5 @@
     "moment": "^2.22.2",
     "request-ip": "^2.1.1",
     "slack-webhook": "^1.0.0"
-  },
-  "devDependencies": {
-    "micro-dev": "^3.0.0"
   }
 }
