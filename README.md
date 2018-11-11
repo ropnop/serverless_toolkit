@@ -57,7 +57,7 @@ Someteimes you just want a shell. This uses gotty ontop of an Alpine base image 
 # Next Steps
 As I continue to play with serverless more I'll keep this updated. PR's and suggestions welcome!
 
-With Zeit's move to Now 2.0, I fear that some of these may not be possible in the nearish future, so eventually I'll look at migrating to AWS or Google Cloud
+With Zeit's move to Now 2.0, I fear that some of these may not be possible in the nearish future, so eventually I'll look at migrating to AWS or Google Cloud and seeing what's possible there
 
 Enjoy!
 ropnop
