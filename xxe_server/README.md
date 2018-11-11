@@ -1,5 +1,5 @@
 # XXE Server
-This example is based off a similar project I wrote a while ago, (xxetimes)[https://github.com/ropnop/xxetimes]. After discovering an OOB XXE vulnerability, exploitation is usually a very manual process that includes spinning up at least one listening server, customizing DTD files and parsing data dump output.
+This example is based off a similar project I wrote a while ago, [xxetimes](https://github.com/ropnop/xxetimes). After discovering an OOB XXE vulnerability, exploitation is usually a very manual process that includes spinning up at least one listening server, customizing DTD files and parsing data dump output.
 
 This serverless function provides two main functionalities to help:
 
