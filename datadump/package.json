@@ -1,0 +1,18 @@
+{
+  "name": "datadump-slack",
+  "version": "1.0.0",
+  "description": "Serverless function to dump POST body data to slack",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Ronnie Flathers (@ropnop)",
+  "license": "ISC",
+  "dependencies": {
+    "@slack/client": "^4.8.0",
+    "express": "^4.16.4",
+    "request-ip": "^2.1.1",
+    "uuid": "^3.3.2"
+  }
+}

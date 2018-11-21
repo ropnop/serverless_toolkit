@@ -29,6 +29,11 @@ This function dumps incoming requests to a Slack webhook. Very useful for when t
 
 ![ssrf_notify_get](./imgs/ssrf_notify_post.png)
 
+### Slack Data Dumper
+This function takes any raw binary POSTed to it and uploads it via the Slack API, then alerts a channel with the new file. The filename is derived from whatever path you POST to. This is really useful for quick data exfiltration during post-exploitation, as you can just use curl with `-data-binary` on a file to your serverless function and get the file contents in your Slack workspace.
+
+![slack_data_dumper](./imgs/slack_tarball_dump.png)
+
 ### XXE Server
 This function spins up a server to help with XXE OOB exfiltration. It's inspired by my other project, [xxetimes](https://github.com/ropnop/xxetimes). The server listens on `/dtd` and serves up a custom DTD file with nested entities to exfiltrate data over HTTP back to itself. It accepts a `filename` parameter to generate a specific file entity (otherwise it has be specified elswhere in the XML). When the server gets data back, it dumps it to Slack.
 
