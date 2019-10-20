@@ -22,13 +22,13 @@ However, these can be toggled to be displayed by setting the environment variabl
 
 ## Deployment
 ```
-$ now --public
+$ now
 ```
 
 If you want to see *all* headers:
 
 ```
-$ now -e ALL_HEADERS=true --public
+$ now -e ALL_HEADERS=true
 ```
 
 ## Usage

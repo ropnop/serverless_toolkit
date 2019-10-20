@@ -9,12 +9,12 @@ This function requres two environment variables:
  * `SLACK_TOKEN` - An OAuth Access token for your Slack App. The app also needs the necessary permissions, including the "Upload and modify files as user" scope.
  * `SLACK_CHANNEL` - the Channel ID to post the message to
 
-I recommend using Now's secrets to store these values. To deploy the function:
+I recommend using Now's secrets to store these values. The function is configured to look for the secrets `slack-token` and `slack-channel`. To deploy the function:
 
 ```
 $ now secrets add slack-token "xxxx-token-here"
 $ now secrets add slack-channel "Cxxxxx"
-$ now -e SLACK_TOKEN=@slack-token -e SLACK_CHANNEL=@slack-channel --public
+$ now
 ```
 
 ## Usage

@@ -1,3 +1,6 @@
+# Now V2 Update
+Unforatunately, I haven't figure out how to port this over to Now V2 since they no longer support running arbitrary Docker containers. This will not work unless you have an older now.sh account that has been grandfathered in to still supporting V1.
+
 # Nmap Scan
 This serverless function wraps an Express app around a basic Nmap scan. It listens for a single URL query called `host` and then executes a fast nmap scan against it with the following options:
 

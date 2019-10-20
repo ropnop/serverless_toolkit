@@ -8,7 +8,7 @@ To customize the Slack message, modify the `renderSlackMessage` function in `ser
 The function requires the environment variable `SLACK_WEBHOOK`.
 
 ## Deployment
-Since it is possible to view public `now.sh` deployment source code and environment variables, it is advisable to keep your Slack WEBHOOK_URL in a [now.sh secret](https://zeit.co/docs/v1/features/env-and-secrets)
+Since it is possible to view public `now.sh` deployment source code and environment variables, it is advisable to keep your Slack WEBHOOK_URL in a [now.sh secret](https://zeit.co/docs/v1/features/env-and-secrets). This function expects a secret called `slack-webhook-ssrf`:
 
 ```
 $ now secret add slack-webhook-ssrf https://hooks.slack.com/services/YOUR_WEBHOOK_HERE
@@ -17,7 +17,7 @@ $ now secret add slack-webhook-ssrf https://hooks.slack.com/services/YOUR_WEBHOO
 And deploy the function with the secret as the environment variables:
 
 ```
-$ now -e SLACK_WEBHOOK=@slack-webhook-ssrf --public
+$ now
 ```
 
 ## Usage

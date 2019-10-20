@@ -7,6 +7,9 @@ For more information and background, see the related blogpost: https://blog.ropn
 
 -ropnop
 
+### Now V2
+Since the initial release of this toolkit, Now V2 is now the default and V1 is no longer supported for new accounts. I have updated all the functions to support NowV2, but unfortunately `massdns`, `nmap_scan` and `webshell` no longer work with the new builders in NowV2.
+
 ## List of Functions
 Each function contains more information on how to install and use. The following functions are included:
 

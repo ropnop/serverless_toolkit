@@ -22,7 +22,7 @@ $ now secret add slack-webhook-xxe https://hooks.slack.com/services/YOUR_WEBHOOK
 And deploy with the environment variable:
 
 ```
-$ now -e SLACK_WEBHOOK=@slack-webhook-xxe --public
+$ now -e SLACK_WEBHOOK=@slack-webhook-xxe
 ```
 
 ## Usage

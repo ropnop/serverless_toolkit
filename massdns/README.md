@@ -1,3 +1,6 @@
+# Now V2 Update
+Unforatunately, I haven't figure out how to port this over to Now V2 since they no longer support running arbitrary Docker containers. This will not work unless you have an older now.sh account that has been grandfathered in to still supporting V1.
+
 # Massdns Serverless
 This example compiles and installs [massdns](https://github.com/blechschmidt/massdns) inside a Docker container running the Micro webserver. The webserver reads data from POST request bodies, writes it to a temp file, and executes `massdns` against it like so:
 
