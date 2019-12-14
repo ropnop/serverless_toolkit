@@ -40,5 +40,5 @@ module.exports = async (req, res) => {
     body: String(await rawBody(req)),
     ip: clientIp
   };
-  return data;
+  return res.status(200).send(data);
 }

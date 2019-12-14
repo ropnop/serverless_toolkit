@@ -7,12 +7,12 @@ The function takes two environment variables:
 
 ## Deployment
 ```
-$ now -e REDIRECT_URL=https://example.com --public
+$ now -e REDIRECT_URL=https://example.com
 ```
 
 To change the status code:
 ```
-$ now -e REDIRECT_URL=file://responder.example.com/share -e STATUS=303 --public
+$ now -e REDIRECT_URL=file://responder.example.com/share -e STATUS=303
 ```
 
 ## Usage

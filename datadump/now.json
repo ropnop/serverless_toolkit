@@ -1,3 +1,17 @@
 {
-  "version": 1
+  "version": 2,
+  "name": "datadump-slack",
+  "builds": [
+    {
+      "src": "index.js",
+      "use": "@now/node"
+    }
+  ],
+  "routes": [
+    { "src": "(.*)", "dest": "index.js"}
+  ],
+  "env": {
+    "SLACK_TOKEN": "@slack-token",
+    "SLACK_CHANNEL": "@slack-channel"
+  }
 }

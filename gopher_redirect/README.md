@@ -12,7 +12,7 @@ The function also requires the environment variable `REDIRECT_HOST`, which is wh
 To deploy:
 
 ```
-$ now -e REDIRECT_HOST="localhost:5000" --public
+$ now -e REDIRECT_HOST="localhost:5000"
 ```
 
 ## Example usage

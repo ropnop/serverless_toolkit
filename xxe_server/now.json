@@ -1,3 +1,17 @@
 {
-  "version": 1
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.js",
+      "use": "@now/node",
+      "config": {
+        "includeFiles": [
+          "templates/**"
+        ]
+      }
+    }
+  ],
+  "routes": [
+    { "src": "(.*)", "dest": "index.js"}
+  ]
 }
