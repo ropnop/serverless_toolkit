@@ -11,7 +11,7 @@
   "author": "Ronnie Flathers (@ropnop)",
   "license": "ISC",
   "dependencies": {
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "micro": "^9.3.3",
     "request-ip": "^2.1.1"
   }
