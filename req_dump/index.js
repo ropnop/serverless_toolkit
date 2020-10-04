@@ -16,8 +16,11 @@ const IGNORED_HEADERS = [
   "cf-visitor",
   "cf-connecting-ip",
   "true-client-ip",
+  "x-vercel-deployment-url",
+  "x-vercel-forwarded-for",
+  "x-vercel-id"
 ]
-const ALL_HEADERS = process.env.ALL_HEADERS || false; // toggle this to show them
+const ALL_HEADERS = process.env.ALL_HEADERS || true; // toggle this to hide them
 
 
 module.exports = async (req, res) => {
@@ -40,5 +43,8 @@ module.exports = async (req, res) => {
     body: String(await rawBody(req)),
     ip: clientIp
   };
+  const origin = req.headers.origin || "*"
+  res.setHeader('Access-Control-Allow-Origin', origin)
+  res.setHeader('Access-Control-Allow-Credentials', "true")
   return res.status(200).send(data);
 }
