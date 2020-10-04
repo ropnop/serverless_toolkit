@@ -18,9 +18,27 @@ const IGNORED_HEADERS = [
   "true-client-ip",
   "x-vercel-deployment-url",
   "x-vercel-forwarded-for",
-  "x-vercel-id"
+  "x-vercel-id",
+  "x-forwarded-port"
 ]
 const ALL_HEADERS = process.env.ALL_HEADERS || true; // toggle this to hide them
+
+const CORS_ALLOWED_HEADERS = [
+  "accept",
+  "accept-language",
+  "content-language",
+  "content-type",
+  "dpr",
+  "downlink",
+  "save-data",
+  "viewport-width",
+  "width",
+  "host",
+  "origin",
+  "user-agent",
+  "connection",
+  ...IGNORED_HEADERS
+]
 
 
 module.exports = async (req, res) => {
@@ -43,8 +61,19 @@ module.exports = async (req, res) => {
     body: String(await rawBody(req)),
     ip: clientIp
   };
-  const origin = req.headers.origin || "*"
-  res.setHeader('Access-Control-Allow-Origin', origin)
-  res.setHeader('Access-Control-Allow-Credentials', "true")
+  const origin = req.headers.origin || "*";
+
+  customHeaders = req.headers["access-control-request-headers"] || "";
+  customMethods = req.headers["access-control-request-method"] || "";
+
+  res.setHeader('Access-Control-Allow-Origin', origin);
+  res.setHeader('Access-Control-Allow-Credentials', "true");
+  if (customHeaders) {
+    res.setHeader('Access-Control-Allow-Headers', customHeaders);
+  }
+  if (customMethods) {
+    res.setHeader('Access-Control-Allow-Methods', customMethods)
+  }
+  
   return res.status(200).send(data);
 }
