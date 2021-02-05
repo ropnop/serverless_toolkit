@@ -1,7 +1,6 @@
 #!/bin/bash
 
-if [ -z "${GOTTY_CREDENTIALS}" ]; then
-  /usr/local/bin/gotty -w --reconnect /bin/bash
-else
-  /usr/local/bin/gotty -w --reconnect -c "${GOTTY_CREDENTIALS}" /bin/bash
-fi
+GOTTY=$(which gotty || /usr/local/bin/gotty)
+
+[ -z "${GOTTY_CREDENTIALS}" ] && OPTS="-c ${GOTTY_CREDENTIALS}"
+${GOTTY} -w --reconnect ${OPTS} $@ /bin/bash
