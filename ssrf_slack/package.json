@@ -13,7 +13,7 @@
   "dependencies": {
     "lodash": "^4.17.15",
     "micro": "^9.3.3",
-    "moment": "^2.22.2",
+    "moment": "^2.29.2",
     "request-ip": "^2.1.1",
     "slack-webhook": "^1.0.0"
   }
